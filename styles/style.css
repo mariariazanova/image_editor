@@ -299,7 +299,8 @@ canvas {
 .draggable {
     cursor: move;
 }
-div.svg_field {
+
+svg {
     position:absolute;
     max-width: 600px;
     max-height: 600px;
