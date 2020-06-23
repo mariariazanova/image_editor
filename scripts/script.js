@@ -1,176 +1,169 @@
 "use strict";
+           var big=document.getElementById('main'); 
+           var gr=document.getElementById('field'); 
+           var main=document.getElementById('photo-field'); 
+           var field=document.getElementById('for-background');
+           var SVGElem=document.getElementById("SSS");
+           var canvas = document.getElementById("canvas");
 
-var big=document.getElementById('main'); 
-var gr=document.getElementById('field'); 
-var main=document.getElementById('photo-field'); 
-var field=document.getElementById('for-background');
-var SVGElem=document.getElementById("SSS");
-var canvas = document.getElementById("canvas");
-      
-function f_go(mpage)   {        // функция переключения вкладок
-    switch (mpage) {
-      	case 1:
-            document.getElementById('for-background').style.display="flex";
-            document.getElementById('for-element').style.display="none";
-            document.getElementById('for-color').style.display="none";
-            document.getElementById('for-text').style.display="none";
-            document.getElementById('for-draw').style.display="none";
-            document.getElementById('for-hand').style.display="none";
-            document.getElementById('icon-button-background').style.background="#A63B4C";
-            document.getElementById('icon-button-element').style.background="#BFA696";
-            document.getElementById('icon-button-color').style.background="#BFA696";
-            document.getElementById('icon-button-text').style.background="#BFA696";
-            document.getElementById('icon-button-draw').style.background="#BFA696";
-            document.getElementById('icon-button-hand').style.background="#BFA696";
-            deactivateCanvas();
-            clickSoundInit(); 
- 			      break;
-		    case 2:
-            document.getElementById('for-background').style.display="none";
-            document.getElementById('for-element').style.display="flex";
-            document.getElementById('for-color').style.display="none";
-            document.getElementById('for-text').style.display="none";
-            document.getElementById('for-draw').style.display="none";
-            document.getElementById('for-hand').style.display="none";
-            document.getElementById('icon-button-background').style.background="#BFA696";
-            document.getElementById('icon-button-element').style.background="#A63B4C";
-            document.getElementById('icon-button-color').style.background="#BFA696";
-            document.getElementById('icon-button-text').style.background="#BFA696";
-            document.getElementById('icon-button-draw').style.background="#BFA696";
-            document.getElementById('icon-button-hand').style.background="#BFA696";
-            deactivateCanvas();
-            clickSoundInit(); 
-			      break;
-		    case 3:
-            document.getElementById('for-background').style.display="none";
-            document.getElementById('for-element').style.display="none";
-            document.getElementById('for-color').style.display="flex";
-            document.getElementById('for-text').style.display="none";
-            document.getElementById('for-draw').style.display="none";
-            document.getElementById('for-hand').style.display="none";
-            document.getElementById('icon-button-background').style.background="#BFA696";
-            document.getElementById('icon-button-element').style.background="#BFA696";
-            document.getElementById('icon-button-color').style.background="#A63B4C";
-            document.getElementById('icon-button-text').style.background="#BFA696";
-            document.getElementById('icon-button-draw').style.background="#BFA696";
-            document.getElementById('icon-button-hand').style.background="#BFA696";
-            deactivateCanvas();
-            clickSoundInit();
-            break;
-		    case 4:
-            document.getElementById('for-background').style.display="none";
-            document.getElementById('for-element').style.display="none";
-            document.getElementById('for-color').style.display="none";
-            document.getElementById('for-text').style.display="flex";
-            document.getElementById('for-draw').style.display="none";
-            document.getElementById('for-hand').style.display="none";
-            document.getElementById('icon-button-background').style.background="#BFA696";
-            document.getElementById('icon-button-element').style.background="#BFA696";
-            document.getElementById('icon-button-color').style.background="#BFA696";
-            document.getElementById('icon-button-text').style.background="#A63B4C";
-            document.getElementById('icon-button-draw').style.background="#BFA696";
-            document.getElementById('icon-button-hand').style.background="#BFA696";
-            deactivateCanvas();
-            clickSoundInit(); 
-			      break;
-		    case 5:
-            document.getElementById('for-background').style.display="none";
-            document.getElementById('for-element').style.display="none";
-            document.getElementById('for-color').style.display="none";
-            document.getElementById('for-text').style.display="none";
-            document.getElementById('for-draw').style.display="flex";
-            document.getElementById('for-hand').style.display="none";
-            document.getElementById('icon-button-background').style.background="#BFA696";
-            document.getElementById('icon-button-element').style.background="#BFA696";
-            document.getElementById('icon-button-color').style.background="#BFA696";
-            document.getElementById('icon-button-text').style.background="#BFA696";
-            document.getElementById('icon-button-draw').style.background="#A63B4C";
-            document.getElementById('icon-button-hand').style.background="#BFA696";
-            activateCanvas();
-            clickSoundInit(); 
-			      break;
-      	case 6:
-            document.getElementById('for-background').style.display="none";
-            document.getElementById('for-element').style.display="none";
-            document.getElementById('for-color').style.display="none";
-            document.getElementById('for-text').style.display="none";
-            document.getElementById('for-draw').style.display="none";
-            document.getElementById('for-hand').style.display="flex";
-            document.getElementById('icon-button-background').style.background="#BFA696";
-            document.getElementById('icon-button-element').style.background="#BFA696";
-            document.getElementById('icon-button-color').style.background="#BFA696";
-            document.getElementById('icon-button-text').style.background="#BFA696";
-            document.getElementById('icon-button-draw').style.background="#BFA696";
-            document.getElementById('icon-button-hand').style.background="#A63B4C";
-            deactivateCanvas();
-            clickSoundInit(); 
-			      break;
-    }
-}
+         
+           function f_go(mpage)   {                                                                                                          // функция переключения вкладок
+          	switch (mpage) {
+      		   case 1:
+			document.getElementById('for-background').style.display="flex";
+			document.getElementById('for-element').style.display="none";
+			document.getElementById('for-color').style.display="none";
+			document.getElementById('for-text').style.display="none";
+			document.getElementById('for-draw').style.display="none";
+			document.getElementById('for-hand').style.display="none";
+			document.getElementById('icon-button-background').style.background="#A63B4C";
+			document.getElementById('icon-button-element').style.background="#BFA696";
+			document.getElementById('icon-button-color').style.background="#BFA696";
+			document.getElementById('icon-button-text').style.background="#BFA696";
+			document.getElementById('icon-button-draw').style.background="#BFA696";
+			document.getElementById('icon-button-hand').style.background="#BFA696";
+                        deactivateCanvas();
+                        clickSoundInit(); 
+ 
+			break;
+		  case 2:
+			document.getElementById('for-background').style.display="none";
+			document.getElementById('for-element').style.display="flex";
+			document.getElementById('for-color').style.display="none";
+			document.getElementById('for-text').style.display="none";
+			document.getElementById('for-draw').style.display="none";
+			document.getElementById('for-hand').style.display="none";
+			document.getElementById('icon-button-background').style.background="#BFA696";
+			document.getElementById('icon-button-element').style.background="#A63B4C";
+			document.getElementById('icon-button-color').style.background="#BFA696";
+			document.getElementById('icon-button-text').style.background="#BFA696";
+			document.getElementById('icon-button-draw').style.background="#BFA696";
+			document.getElementById('icon-button-hand').style.background="#BFA696";
+                        deactivateCanvas();
+                        clickSoundInit(); 
+
+			break;
+		  case 3:
+			document.getElementById('for-background').style.display="none";
+			document.getElementById('for-element').style.display="none";
+			document.getElementById('for-color').style.display="flex";
+			document.getElementById('for-text').style.display="none";
+			document.getElementById('for-draw').style.display="none";
+			document.getElementById('for-hand').style.display="none";
+			document.getElementById('icon-button-background').style.background="#BFA696";
+			document.getElementById('icon-button-element').style.background="#BFA696";
+			document.getElementById('icon-button-color').style.background="#A63B4C";
+			document.getElementById('icon-button-text').style.background="#BFA696";
+			document.getElementById('icon-button-draw').style.background="#BFA696";
+			document.getElementById('icon-button-hand').style.background="#BFA696";
+                        deactivateCanvas();
+                        clickSoundInit();
+  
+                        break;
+		  case 4:
+			document.getElementById('for-background').style.display="none";
+			document.getElementById('for-element').style.display="none";
+			document.getElementById('for-color').style.display="none";
+			document.getElementById('for-text').style.display="flex";
+			document.getElementById('for-draw').style.display="none";
+			document.getElementById('for-hand').style.display="none";
+			document.getElementById('icon-button-background').style.background="#BFA696";
+			document.getElementById('icon-button-element').style.background="#BFA696";
+			document.getElementById('icon-button-color').style.background="#BFA696";
+			document.getElementById('icon-button-text').style.background="#A63B4C";
+			document.getElementById('icon-button-draw').style.background="#BFA696";
+			document.getElementById('icon-button-hand').style.background="#BFA696";
+                        deactivateCanvas();
+                        clickSoundInit(); 
+
+			break;
+		  case 5:
+			document.getElementById('for-background').style.display="none";
+			document.getElementById('for-element').style.display="none";
+			document.getElementById('for-color').style.display="none";
+			document.getElementById('for-text').style.display="none";
+			document.getElementById('for-draw').style.display="flex";
+			document.getElementById('for-hand').style.display="none";
+			document.getElementById('icon-button-background').style.background="#BFA696";
+			document.getElementById('icon-button-element').style.background="#BFA696";
+			document.getElementById('icon-button-color').style.background="#BFA696";
+			document.getElementById('icon-button-text').style.background="#BFA696";
+			document.getElementById('icon-button-draw').style.background="#A63B4C";
+			document.getElementById('icon-button-hand').style.background="#BFA696";
+                        activateCanvas();
+                        clickSoundInit(); 
+
+			break;
+      		   case 6:
+			document.getElementById('for-background').style.display="none";
+			document.getElementById('for-element').style.display="none";
+			document.getElementById('for-color').style.display="none";
+			document.getElementById('for-text').style.display="none";
+			document.getElementById('for-draw').style.display="none";
+			document.getElementById('for-hand').style.display="flex";
+			document.getElementById('icon-button-background').style.background="#BFA696";
+			document.getElementById('icon-button-element').style.background="#BFA696";
+			document.getElementById('icon-button-color').style.background="#BFA696";
+			document.getElementById('icon-button-text').style.background="#BFA696";
+			document.getElementById('icon-button-draw').style.background="#BFA696";
+			document.getElementById('icon-button-hand').style.background="#A63B4C";
+                        deactivateCanvas();
+                        clickSoundInit(); 
+
+			break;
+               }
+           }
+
 // вкладка "Фоны"
-document.getElementById('for-background').onclick=function uniClick(EO) {    //функция изменения цвета фона (заливки) поля при нажатии на кнопку с цветом
-    EO=EO||window.event;
-    var div=EO.target||EO.srcElement;
-    if (div.getAttribute('data-color')) {
-        var color=div.getAttribute('data-color');
-        main.style.background=color;
-    }
-}
-// раздел "элементы"       
-function getElementPos(elem) {
-      var bbox = elem.getBoundingClientRect();
-      return {
-          left: bbox.left + window.pageXOffset,
-          top: bbox.top + window.pageYOffset,
-          width: bbox.right -  bbox.left,
-          height: bbox.bottom - bbox.top
-      };
-}
 
-var countRect=1;  
-var countSquare=1;    
-var countCircle=1;
-var countEllipse=1;
-var countPoint=1;
-var countLine=1;
-var countPict=1;
-
-function createSvg(){
-   var dv=document.createElement('div');
-   dv.className='';
-   var svgshka=document.createElementNS("http://www.w3.org/2000/svg", 'svg');
-  svgshka.setAttribute('id', ''); 
-  dv.appendChild(svgshka);
-  SVGElem.appendChild(dv);  
-
-}
+                 document.getElementById('for-background').onclick=function uniClick(EO) {                                                                //функция изменения цвета фона (заливки) поля при нажатии на кнопку с цветом
+                        EO=EO||window.event;
+                        var div=EO.target||EO.srcElement;
+                        if (div.getAttribute('data-color')) {
+                             var color=div.getAttribute('data-color');
+                             main.style.background=color;
+                         }
+                   }
 
 
+// раздел "элементы"
+           
+                 function getElementPos(elem) {
+                        var bbox = elem.getBoundingClientRect();
+                         return {
+                                 left: bbox.left + window.pageXOffset,
+                                 top: bbox.top + window.pageYOffset,
+                                 width: bbox.right -  bbox.left,
+                                 height: bbox.bottom - bbox.top
+                           };
+                }
 
-function createRect() {
-    var dv=document.createElement('div');
-    dv.className='';
-    var svgshka=document.createElementNS("http://www.w3.org/2000/svg", 'svg');
-    var rect=document.createElementNS("http://www.w3.org/2000/svg",'rect');
-    rect.setAttribute("x","0");
-    rect.setAttribute("y","0");
-    rect.setAttribute("width", "100");
-    rect.setAttribute("height","55");
-    rect.setAttribute("fill","yellow");
-    rect.setAttribute("stroke","yellow");
-    rect.setAttribute('class','draggable');
-    rect.setAttribute("id",'rect'+countRect);
-    rect.setAttributeNS(null,'transform', "matrix(1 0 0 1 0 0)");
-    rect.setAttributeNS(null,'onmousedown', 'selectElement(event)');
-    getSound();     
-    getVibro();
-    svgshka.appendChild(rect);   
-    dv.appendChild(svgshka);
-    SVGElem.appendChild(dv);                                       
-    
-    console.log('Добавил прямоугольник' +' '+ 'id='+rect.id);
-    countRect++;
-}
+           var countRect=1;  
+           var countSquare=1;    
+           var countCircle=1;
+           var countEllipse=1;
+           var countPoint=1;
+           var countLine=1;
+           var countPict=1;
+
+           function createRect() {
+                  var rect=document.createElementNS("http://www.w3.org/2000/svg",'rect');
+                  rect.setAttribute("x","0");
+                  rect.setAttribute("y","0");
+                  rect.setAttribute("width", "100");
+                  rect.setAttribute("height","55");
+                  rect.setAttribute("fill","yellow");
+                  rect.setAttribute("stroke","yellow");
+                  rect.setAttribute('class','draggable');
+                  rect.setAttribute("id",'rect'+countRect);
+                  rect.setAttributeNS(null,'transform', "matrix(1 0 0 1 0 0)");
+                  rect.setAttributeNS(null,'onmousedown', 'selectElement(event)');
+                  getSound();     
+                  getVibro();                                      
+                  SVGElem.appendChild(rect);
+                  console.log('Добавил прямоугольник' +' '+ 'id='+rect.id);
+                  countRect++;
+            }
 
            function createSquare() {
                   var sq=document.createElementNS("http://www.w3.org/2000/svg",'rect');
